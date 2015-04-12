@@ -11,7 +11,32 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label  :isbn %><br />
+    <%= f.text_field :title %><br />
+  </div>
+    
+  <div class="field">
+    <%= f.label  :price %><br />
+    <%= f.text_field :price %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label  :publish %><br />
+    <%= f.text_field :publish %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label  :published %><br />
+    <%= f.date_select :published %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label  "with #{:cd}" %>
+      <%= f.check_box :cd %><br />
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit%>
   </div>
 <% end %>
