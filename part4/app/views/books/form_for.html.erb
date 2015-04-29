@@ -1,0 +1,36 @@
+<%= form_for(@book) do |f| %>
+  <div class="field">
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %><br />
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %><br />
+  </div>
+  
+  <div class="field">
+    <%= f.label :publish %><br />
+    <%= f.collection_select( :publish, @books, :publish, :publish ) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :published %><br />
+    <%= f.text_field :published %><br />
+  </div>
+  
+  <div class="field">
+    <%= f.label :cd %><br />
+    <%= f.check_box :cd %><br />
+  </div>
+
+  <div class="actions">
+    <%= f.submit%>
+  </div>
+
+<% end %>
