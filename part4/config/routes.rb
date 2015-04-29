@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :reviews
   resources :authors
   resources :users
-  resources :books
+  resources :books do
+    collection do
+      get 'form_for'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -58,5 +62,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  match ':controller(/:action(/:id))', via: [ :get, :post, :patch ]
 end

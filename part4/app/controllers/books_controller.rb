@@ -37,6 +37,11 @@ class BooksController < ApplicationController
     end
   end
 
+  def form_for
+    @book = Book.new
+    @books = Book.select(:publish).distinct
+  end
+
   # PATCH/PUT /books/1
   # PATCH/PUT /books/1.json
   def update
